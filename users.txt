@@ -1,0 +1,4 @@
+wesley@email.com;123;wesley;2023-04-09
+teste@teste.com;teste;teste;2023-04-09
+usuario@email.com;123;usuario_teste;2023-04-09
+teste1@gmail.com;senha1123@;teste1;2024-05-06
