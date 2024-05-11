@@ -1,3 +1,4 @@
+from kivy.core.window import Window
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -5,7 +6,9 @@ from kivy.properties import ObjectProperty
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
 from database import DataBase
-from kivy.core.window import Window
+import pyautogui
+# from kivy.uix.reloader import Reloader
+
 
 # Definição das janelas de tela
 
@@ -117,11 +120,13 @@ for screen in screens:
 class MyMainApp(App):
     def build(self):
         # Define o tamanho da janela para corresponder ao tamanho de um smartphone
-        Window.size = (360, 640)  
+        Window.size = (360, 640)
         
+        # Define a posição da janela para 'auto' para que o sistema operacional gerencie
+        Window.position = 'auto'
+        
+        # Retorna o WindowManager como o root
         return sm
-    
-# Verificação se o script está sendo executado diretamente e inicialização do aplicativo
 
 if __name__ == "__main__":
     MyMainApp().run()
