@@ -43,6 +43,11 @@ class LoginWindow(Screen):
     # Definição de propriedades de objetos para os elementos de interface do usuário
     email = ObjectProperty(None)
     password = ObjectProperty(None)
+
+    def createBtn(self):
+        # Método para navegar para a tela de criação de conta
+        self.reset()
+        sm.current = "create"
     
     def loginBtn(self):
         # Método para lidar com o evento de clique no botão de login
@@ -52,11 +57,6 @@ class LoginWindow(Screen):
             sm.current = "main"
         else:
             invalidLogin()
-            
-    def createBtn(self):
-        # Método para navegar para a tela de criação de conta
-        self.reset()
-        sm.current = "create"
         
     def reset(self):
         # Método para redefinir os campos do formulário
