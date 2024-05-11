@@ -5,6 +5,7 @@ from kivy.properties import ObjectProperty
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
 from database import DataBase
+from kivy.core.window import Window
 
 # Definição das janelas de tela
 
@@ -115,6 +116,9 @@ for screen in screens:
 
 class MyMainApp(App):
     def build(self):
+        # Define o tamanho da janela para corresponder ao tamanho de um smartphone
+        Window.size = (360, 640)  
+        
         return sm
     
 # Verificação se o script está sendo executado diretamente e inicialização do aplicativo
